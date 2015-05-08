@@ -21,8 +21,12 @@ set vb t_vb=
 set visualbell
 let loaded_matchparen = 1
 set showmatch
+set nrformats=
 set matchtime=1
 set display=lastline
+set history=200
+set shell=/usr/local/bin/zsh
+set pastetoggle=<f5>
 
 inoremap jj <Esc><Esc><Esc>
 nnoremap <silent> j gj
@@ -41,11 +45,13 @@ noremap <S-h> ^
 noremap <S-j> }
 noremap <S-k> {
 noremap <S-l> $
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 cnoremap nse NeoSnippetEdit
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-nnoremap <CR> A<CR><ESC>
+nnoremap <CR> I<CR><ESC>
 nnoremap == gg=G''
 function! ZenkakuSpace()
   highlight ZenkakuSpace cterm=underline ctermfg=15 gui=underline guifg=white
@@ -89,28 +95,35 @@ NeoBundle 'Shougo/vimproc', {
       \    },
       \ }
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'elzr/vim-json'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'Shougo/neomru.vim'
+" NeoBundle 'Shougo/vimfiler'
+" NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'cocopon/lightline-hybrid.vim'
-
 filetype plugin indent on
 NeoBundleCheck
 
-"　プラグインの設定
+runtime macros/matchit.vim
 
+"　プラグインの設定
+"syntastic
+let g:syntastic_mode_map = {
+      \ "mode": "active",
+      \ "passive_filetypes": ["html"] }
+let g:vim_json_syntax_conceal = 0
 " emmet vim
 let g:user_emmet_leader_key='<c-t>'
 let g:user_emmet_settings = {
@@ -134,7 +147,6 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
       \ 'default' : '',
-      \ 'vimshell' : $HOME.'/.vimshell_hist',
       \ 'scheme' : $HOME.'/.gosh_completions'
       \ }
 
@@ -228,6 +240,15 @@ let g:neosnippet#disable_runtime_snippets = {
       \   '_' : 1,
       \ }
 
+" Uniteの設定
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 
 "NERDTree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
