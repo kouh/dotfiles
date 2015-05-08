@@ -25,7 +25,7 @@ set nrformats=
 set matchtime=1
 set display=lastline
 set history=200
-set shell=/usr/local/bin/zsh
+" set shell=/usr/local/bin/zsh
 set pastetoggle=<f5>
 
 inoremap jj <Esc><Esc><Esc>
@@ -82,7 +82,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 " プラグイン
 NeoBundle 'Shougo/unite.vim'
@@ -113,6 +112,7 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'cocopon/lightline-hybrid.vim'
+call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
 
