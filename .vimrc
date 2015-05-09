@@ -47,7 +47,7 @@ noremap <S-k> {
 noremap <S-l> $
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-cnoremap nse NeoSnippetEdit
+nnoremap <silent> ,nse :NeoSnippetEdit<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
@@ -113,8 +113,9 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'cocopon/lightline-hybrid.vim'
 call neobundle#end()
-filetype plugin indent on
 NeoBundleCheck
+
+filetype plugin indent on
 
 runtime macros/matchit.vim
 
