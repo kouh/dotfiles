@@ -126,7 +126,9 @@ let g:syntastic_mode_map = {
       \ "passive_filetypes": ["html"] }
 let g:vim_json_syntax_conceal = 0
 " emmet vim
-let g:user_emmet_leader_key='<c-t>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_expandabbr_key = '<c-t>'
 let g:user_emmet_settings = {
       \   'variables': {
       \     'lang' : 'ja'
