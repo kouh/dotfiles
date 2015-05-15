@@ -27,6 +27,9 @@ set display=lastline
 set history=200
 " set shell=/usr/local/bin/zsh
 set pastetoggle=<f5>
+augroup vimrc
+  autocmd! FileType php setlocal shiftwidth=4 tabstop=4
+augroup END
 
 inoremap jj <Esc><Esc><Esc>
 inoremap <C-j> <Esc><Esc><Esc>
@@ -51,6 +54,7 @@ noremap <S-l> $
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 nnoremap <silent> ,nse :NeoSnippetEdit<CR>
+nnoremap <silent> ,rc :tabe ~/.vimrc<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
