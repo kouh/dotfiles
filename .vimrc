@@ -29,6 +29,7 @@ set history=200
 set pastetoggle=<f5>
 
 inoremap jj <Esc><Esc><Esc>
+inoremap <C-j> <Esc><Esc><Esc>
 nnoremap <silent> j gj
 nnoremap <silent> gj j
 nnoremap <silent> k gk
@@ -41,6 +42,8 @@ vnoremap <silent> k gk
 vnoremap <silent> gk k
 vnoremap <silent> $ g$
 vnoremap <silent> g$ $
+nnoremap <Right> gt
+nnoremap <Left> gT
 noremap <S-h> ^
 noremap <S-j> }
 noremap <S-k> {
