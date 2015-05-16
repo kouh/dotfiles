@@ -116,7 +116,7 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'cocopon/lightline-hybrid.vim'
 call neobundle#end()
