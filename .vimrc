@@ -27,8 +27,14 @@ set display=lastline
 set history=200
 " set shell=/usr/local/bin/zsh
 set pastetoggle=<f5>
+set autoread
 augroup vimrc
   autocmd! FileType php setlocal shiftwidth=4 tabstop=4
+augroup END
+
+augroup vimrc-checktime
+  autocmd!
+  autocmd WinEnter * checktime
 augroup END
 inoremap jj <Esc><Esc><Esc>
 inoremap <C-j> <Esc><Esc><Esc>
