@@ -1,5 +1,5 @@
 snippet object
-alias . obj
+alias obj
   {
     ${1:key}: ${2:value},${3}
   }
@@ -12,3 +12,9 @@ alias f
   function${1}(${2}) {
     ${3}  
   }
+
+snippet addEventListner
+alias event
+  ${1:window}.addEventListener('${2:click}', function(){
+    ${3}
+  });
