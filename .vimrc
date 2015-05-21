@@ -244,14 +244,14 @@ smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : 
 
 " For snippet_complete marker.
 if has('conceal')
-  set conceallevel=2 concealcursor=i
+  set conceallevel=0 concealcursor=i
 endif
 
-" let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.vim/my-snippets'
-let g:neosnippet#disable_runtime_snippets = {
-      \   '_' : 1,
-      \ }
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/my-snippets'
+" let g:neosnippet#disable_runtime_snippets = {
+"       \   '_' : 1,
+"       \ }
 
 " if !exists('g:neocomplete#sources')
 "   let g:neocomplete#sources = {}
