@@ -9,6 +9,10 @@ setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加�
 setopt share_history      # 他のシェルのヒストリをリアルタイムで共有する
 setopt hist_reduce_blanks # 余分なスペースを削除してヒストリに保存する
 
+# history search
+bindkey '^P' history-beginning-search-backward
+bindkey '^N' history-beginning-search-forward
+
 
 ########################################
 # Zsh 補完
