@@ -9,7 +9,7 @@ function! ToggleTransparence()
   if &transparency > 0
     set transparency=0
   else
-    set transparency=20
+    set transparency=25
   endif
 endfunction
 call ToggleTransparence()
