@@ -25,7 +25,6 @@ set nrformats=
 set matchtime=1
 set display=lastline
 set history=200
-" set shell=/usr/local/bin/zsh
 set pastetoggle=<f5>
 set autoread
 augroup vimrc
@@ -117,8 +116,6 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'Shougo/vimfiler'
-" NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'chase/vim-ansible-yaml'
 NeoBundle 'altercation/vim-colors-solarized'
