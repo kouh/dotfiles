@@ -1,0 +1,7 @@
+alias reload = 'vimsh ~/.vimshrc'
+alias ll='ls -alt'
+alias vi='vim'
+alias v='vim'
+alias c='clear'
+alias bsync='browser-sync start --server --files "**/*"'
+alias bsync-proxy='browser-sync start --proxy "" --files "**/*"'
