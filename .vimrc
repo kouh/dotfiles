@@ -59,6 +59,7 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 nnoremap <silent> ,nse :NeoSnippetEdit<CR>
 nnoremap <silent> ,rc :tabe ~/.vimrc<CR>
+nnoremap <silent> ,grc :tabe ~/.gvimrc<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
