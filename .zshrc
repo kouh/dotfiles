@@ -50,3 +50,5 @@ function cd() {
 }
 
 alias ls='ls -G -F'
+alias ll='ls -alt'
+alias c='clear'
