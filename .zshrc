@@ -20,7 +20,7 @@ bindkey '^N' history-beginning-search-forward
 # 補完機能を有効にする
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit
-compinit
+compinit -C
 setopt auto_list               # 補完候補を一覧で表示する(d)
 setopt auto_menu               # 補完キー連打で補完候補を順に表示する(d)
 setopt list_packed             # 補完候補をできるだけ詰めて表示する
@@ -67,3 +67,8 @@ function cd() {
 alias ls='ls -G -F'
 alias ll='ls -alt'
 alias c='clear'
+
+# if (which zprof > /dev/null) ;then
+#   zprof | less
+# fi
+
