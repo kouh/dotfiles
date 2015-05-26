@@ -67,6 +67,8 @@ function cd() {
 alias ls='ls -G -F'
 alias ll='ls -alt'
 alias c='clear'
+alias up='cd ..'
+alias f='open .'
 
 # if (which zprof > /dev/null) ;then
 #   zprof | less
