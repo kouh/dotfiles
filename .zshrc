@@ -70,6 +70,10 @@ alias c='clear'
 alias up='cd ..'
 alias f='open .'
 
+function mkcd() {
+  mkdir $1
+  cd $1
+}
 # if (which zprof > /dev/null) ;then
 #   zprof | less
 # fi
