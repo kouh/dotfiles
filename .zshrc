@@ -66,9 +66,13 @@ function cd() {
 
 alias ls='ls -G -F'
 alias ll='ls -alt'
-alias c='clear'
 alias up='cd ..'
 alias f='open .'
+
+function c() {
+  clear
+  ls
+}
 
 function mkcd() {
   mkdir $1
