@@ -1,15 +1,32 @@
-snippet object
-alias obj
-  {
-    ${1:key}: ${2:value},${3}
-  }
 snippet cl
 alias cl log p
   console.log(${1});
 
 
 snippet addEventListner
-alias event
+alias ae event
   ${1:window}.addEventListener('${2:click}', function(){
     ${3}
   });
+
+snippet querySelector
+alias q qs
+  ${1:document}.querySelector('${2}');
+
+snippet querySelectorAll
+alias qa qsa
+  ${1:document}.querySelectorAll('${2}');
+
+snippet getElementById
+alias getid id
+  ${1:document}.getElementById('${2}');
+
+snippet forEach
+alias fe each
+  Array.prototype.forEach.call(${1:element}, function(e){
+    ${2}
+  });
+
+snippet toArray
+alias toa
+  Array.prototype.slice.call(${1:element});
