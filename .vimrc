@@ -117,6 +117,7 @@ NeoBundle 'honza/vim-snippets'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'asciidoc/vim-asciidoc'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Shougo/neomru.vim'
@@ -146,6 +147,10 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_expandabbr_key = '<C-t>'
 
+autocmd BufNewFile,BufRead *.ad set filetype=asciidoc
+autocmd BufNewFile,BufRead *.adoc set filetype=asciidoc
+autocmd BufNewFile,BufRead *.asciidoc set filetype=asciidoc
+autocmd FileType asciidoc setlocal syntax=asciidoc
 "neocomplete
 "Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
