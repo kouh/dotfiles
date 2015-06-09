@@ -51,8 +51,10 @@ vnoremap <silent> $ g$
 vnoremap <silent> g$ $
 nnoremap <Right> gt
 nnoremap <Left> gT
-nnoremap <Up> :bprevious<CR>
-nnoremap <Down> :bnext<CR>
+nnoremap <silent>bp :bprevious<CR>
+nnoremap <silent>bn :bnext<CR>
+nnoremap <silent>bb :b#<CR>
+nnoremap <silent>bd :bdelete<CR>
 noremap <S-h> ^
 noremap <S-j> }
 noremap <S-k> {
