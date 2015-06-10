@@ -71,6 +71,7 @@ inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 nnoremap <CR> I<CR><ESC>
 nnoremap == gg=G''
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 function! ZenkakuSpace()
   highlight ZenkakuSpace cterm=underline ctermfg=15 gui=underline guifg=white
 endfunction
