@@ -49,6 +49,7 @@ vnoremap <silent> k gk
 vnoremap <silent> gk k
 vnoremap <silent> $ g$
 vnoremap <silent> g$ $
+vnoremap u <Esc>
 nnoremap <Right> gt
 nnoremap <Left> gT
 nnoremap <silent>bp :bprevious<CR>
