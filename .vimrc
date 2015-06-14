@@ -27,6 +27,8 @@ set display=lastline
 set history=200
 set pastetoggle=<f5>
 set autoread
+set splitbelow
+set splitright
 augroup vimrc
   autocmd! FileType php setlocal shiftwidth=4 tabstop=4
 augroup END
