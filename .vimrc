@@ -72,6 +72,7 @@ nnoremap <silent> ,vp :VimShellPop<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
+inoremap <C-Enter> <ESC>o
 nnoremap <CR> I<CR><ESC>
 nnoremap == gg=G''
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
