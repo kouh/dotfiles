@@ -30,6 +30,7 @@ set autoread
 set splitbelow
 set splitright
 set hidden
+set nowrapscan
 augroup vimrc
   autocmd! FileType php setlocal shiftwidth=4 tabstop=4
 augroup END
