@@ -157,7 +157,7 @@ runtime macros/matchit.vim
 "syntastic
 let g:syntastic_mode_map = {
       \ "mode": "active",
-      \ "passive_filetypes": ["html"] }
+      \ "passive_filetypes": ["html", "javascript"] }
 let g:vim_json_syntax_conceal = 0
 " emmet vim
 let g:user_emmet_install_global = 0
