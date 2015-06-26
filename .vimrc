@@ -39,6 +39,9 @@ augroup vimrc-checktime
   autocmd!
   autocmd WinEnter * checktime
 augroup END
+
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
 inoremap jj <Esc><Esc><Esc>
 inoremap <C-j> <Esc><Esc><Esc>
 nnoremap <silent> j gj
@@ -70,11 +73,11 @@ noremap <S-k> {
 noremap <S-l> $
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-nnoremap <silent> ,nse :NeoSnippetEdit<CR>
-nnoremap <silent> ,rc :tabe ~/.vimrc<CR>
-nnoremap <silent> ,grc :tabe ~/.gvimrc<CR>
-nnoremap <silent> ,vs :VimShell<CR>
-nnoremap <silent> ,vp :VimShellPop<CR>
+nnoremap <silent> <Leader>nse :NeoSnippetEdit<CR>
+nnoremap <silent> <Leader>rc :tabe ~/.vimrc<CR>
+nnoremap <silent> <Leader>grc :tabe ~/.gvimrc<CR>
+nnoremap <silent> <Leader>vs :VimShell<CR>
+nnoremap <silent> <Leader>vp :VimShellPop<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
