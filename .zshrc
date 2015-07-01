@@ -81,6 +81,9 @@ function mkcd() {
 # if (which zprof > /dev/null) ;then
 #   zprof | less
 # fi
+function github_dl(){
+  svn checkout https://github.com/$1/trunk/$2
+}
 
 
 ### Added by the Heroku Toolbelt
