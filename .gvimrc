@@ -1,4 +1,5 @@
 set background=dark
+set guifont=Ricty:h16
 set lines=40 columns=140
 " 行番号の色を設定
 hi Visual gui=reverse
@@ -12,5 +13,5 @@ function! ToggleTransparence()
     set transparency=25
   endif
 endfunction
-call ToggleTransparence()
+" call ToggleTransparence()
 nnoremap <silent> <D-u> :call ToggleTransparence()<CR>
