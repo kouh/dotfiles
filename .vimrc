@@ -76,8 +76,8 @@ cnoremap <C-n> <Down>
 nnoremap <silent> <Leader>nse :NeoSnippetEdit<CR>
 nnoremap <silent> <Leader>rc :tabe ~/.vimrc<CR>
 nnoremap <silent> <Leader>grc :tabe ~/.gvimrc<CR>
-nnoremap <silent> <Leader>vs :VimShell<CR>
-nnoremap <silent> <Leader>vp :VimShellPop<CR>
+nnoremap <silent> <Leader>sh :VimShell<CR>
+nnoremap <silent> <Leader>psh :VimShellPop<CR>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
