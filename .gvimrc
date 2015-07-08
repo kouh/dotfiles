@@ -5,6 +5,10 @@ set lines=40 columns=140
 hi Visual gui=reverse
 hi LineNr guifg=#8A8A8A
 set cursorline
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
 function! ToggleTransparence()
   if &transparency > 0
