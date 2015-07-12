@@ -39,3 +39,17 @@ alias toa
 snippet createElement
 alias ce element
   document.createElement('${1:div}');
+
+snippet requestAnimationFrame
+alias animation
+  window.requestAnimFrame = (function () {
+    return window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function raf(callback, element) {
+        setTimeout(callback, 1000 / 30);
+      };
+  })();
+  
